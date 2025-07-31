@@ -10,7 +10,7 @@
 
     /* 🔥 Animated background gradient */
     body {
-      background-color: #fffdf7;
+      background: linear-gradient(270deg, #f9f9f9, #ffe4ec, #e0f7ff);
       background-size: 600% 600%;
       animation: gradientShift 15s ease infinite;
       color: #333;
@@ -31,17 +31,7 @@
       padding: 3rem 1rem;
     }
 
-    /* Gradient Text for header title (Number 4) */
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
-    }
-
+    header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
     header p { font-size: 1.25rem; margin-bottom: 1.5rem; }
 
     .cta-button {
@@ -81,6 +71,7 @@
       margin: 1rem 0;
     }
 
+    /* 🎯 FREE Badge (still included just in case) */
     .free-badge {
       position: absolute;
       top: -10px;
@@ -93,6 +84,7 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
+    /* 💸 Diffuser value badge */
     .badge {
       position: absolute;
       top: 10px;
@@ -134,47 +126,16 @@
     }
 
     .disclaimer { font-size: 0.85rem; color: #777; margin-top: 0.5rem; }
-
-    /* Number 1: Sticky floating CTA button */
-    .cta-floating {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #000;
-      color: #fff;
-      padding: 0.8rem 1.2rem;
-      border-radius: 999px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      z-index: 999;
-      animation: pulse 1.8s infinite;
-    }
-
-    /* Number 2: Fade-in animation */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.2s;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
 </head>
 <body>
-  <header class="fade-in">
+  <header>
     <h1>Drive with Confidence — and a Fresh Ride</h1>
     <p>Unlock a <strong>FREE Aroma Diffuser</strong> when you purchase your car insurance with us.</p>
     <a href="#quote-form" class="cta-button">Get My Freebie Now!</a>
   </header>
 
-  <section class="benefits fade-in">
+  <section class="benefits">
     <h2 class="section-title">We’ve Got Your Back on the Road</h2>
     <p>Car insurance in Singapore is mandatory — but that doesn't mean it has to be boring. Get covered for accidents, theft, and more, while enjoying flexible workshops and lightning-fast claims. Easy, breezy, fully protected.</p>
     <ul>
@@ -185,9 +146,9 @@
     </ul>
   </section>
 
-  <section class="visual fade-in">
+  <section class="visual">
     <h2 class="section-title">✨ Luxury Scents. Anywhere. Anytime.</h2>
-    <p>Meet the <strong>QIS Cold Diffuser (10ml)</strong> – your silent, sleek scent companion. No water, no heat — just pure essential oils diffused like a boss. Perfect for your car, home, office, or even your throne room (aka bathroom).</p>
+    <p>Meet the <strong>QIS Cold Diffuser (worth up to $189)</strong> – your silent, sleek scent companion. No water, no heat — just pure essential oils diffused like a boss. Perfect for your car, home, office, or even your throne room (aka bathroom).</p>
     <ul>
       <li>💨 <strong>Cold diffusion tech</strong> = zero aroma loss</li>
       <li>🔋 <strong>USB rechargeable</strong> & travel-ready</li>
@@ -195,6 +156,7 @@
       <li>🧴 <strong>Refillable 10ml chamber</strong></li>
     </ul>
 
+    <!-- ⭐ Diffuser visual with badge -->
     <div class="visual-image-wrapper">
       <span class="badge">Worth $189 🔥</span>
       <img src="https://iwanttodropout.github.io/pru-car/diffuser.png" alt="Diffuser" style="width: 100%; max-width: 400px;">
@@ -203,20 +165,16 @@
     <p>Our sleek aroma diffuser adds that luxe, spa-like feel to your car. Yours is <strong>FREE</strong> when you purchase your insurance today.</p>
   </section>
 
-  <section id="quote-form" class="fade-in">
+  <section id="quote-form">
     <h2 class="section-title">Let’s Get Started!</h2>
     <form action="https://formspree.io/f/myzppjbw" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="tel" name="contact" placeholder="Contact Number" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="text" name="_gotcha" style="display:none" /> <!-- Anti-spam -->
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="contact" placeholder="Contact Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="_gotcha" style="display:none"> <!-- Anti-spam -->
       <button type="submit">Get My Freebie</button>
     </form>
     <p class="disclaimer">*We respect your privacy. No spam, ever.</p>
   </section>
-
-  <!-- Sticky floating CTA button (Number 1) -->
-  <a href="#quote-form" class="cta-floating">🎁 Claim Freebie</a>
-
 </body>
 </html>
