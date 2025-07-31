@@ -10,22 +10,10 @@
  html {
   scroll-behavior: smooth;
 }
-body::before {
-  content: "";
-  position: fixed;
-  top: -100px;
-  left: -100px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, #b6f0ff, #c8a5ff);
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.5;
-  animation: floatBlob 20s infinite alternate;
-}
-@keyframes floatBlob {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(100px, 100px); }
+body{
+  background: radial-gradient(circle at top left, #c3aee4, transparent 50%),
+              radial-gradient(circle at bottom right, #b7e5fc, transparent 50%);
+  background-color: #f9f9ff;
 }
 
     header, section, footer { padding: 2rem 1rem; max-width: 800px; margin: auto; }
