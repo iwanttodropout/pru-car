@@ -8,20 +8,23 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
 
-    /* 🔥 Animated background gradient */
-    body {
-      background: linear-gradient(270deg, #f9f9f9, #ffe4ec, #e0f7ff);
-      background-size: 600% 600%;
-      animation: gradientShift 15s ease infinite;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    @keyframes gradientShift {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #b6f0ff, #c8a5ff);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  animation: floatBlob 20s infinite alternate;
+}
+@keyframes floatBlob {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(100px, 100px); }
+}
 
     header, section, footer { padding: 2rem 1rem; max-width: 800px; margin: auto; }
 
